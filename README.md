@@ -1,4 +1,19 @@
-Analysis demos
---
+Miami Art Week Map
+---
 
-See README's in each directory for more info.
+Explore points of interests provided by [Mapbox](http://www.mapbox.com)
+by dragging/zooming a circle on a map.
+
+
+### Running locally
+
+    npm install
+    MapboxAccessToken=<YOUR TOKEN> npm start
+
+Browse to http://localhost:9966/ to view the example!
+
+### Building
+
+    MapboxAccessToken=<YOUR TOKEN> npm run build-demo
+
+Compiles a minified `bundle.js` for production
