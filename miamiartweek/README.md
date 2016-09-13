@@ -1,12 +1,9 @@
-Explore NYC attractions
+Miami Art Week Map
 ---
 
-Explore points of interests provided by [NYC open data](https://nycopendata.socrata.com/)
+Explore points of interests provided by [Mapbox](http://www.mapbox.com)
 by dragging/zooming a circle on a map.
 
-![demo](http://i.imgur.com/4p2eVbG.gif)
-
-__Demo:__ https://www.mapbox.com/analysis-demos/nyc-attractions/
 
 ### Running locally
 
