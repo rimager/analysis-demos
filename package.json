@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint --no-eslintrc -c .eslintrc index.js",
-    "start" : "nf start",
+    "start" : "npm start",
     "postinstall" : "browserify index.js | uglifyjs -c -m > bundle.js",
     "build": "browserify index.js | uglifyjs -c -m > bundle.js"
   },
