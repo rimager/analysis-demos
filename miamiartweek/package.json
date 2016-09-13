@@ -30,5 +30,8 @@
   "dependencies": {
     "lodash.template": "^3.6.2",
     "raphael": "^2.1.4"
+  },
+"engines": {
+    "node": "4.5.0"
   }
 }

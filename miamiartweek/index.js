@@ -1,7 +1,8 @@
 'use strict';
 
 /* global mapboxgl */
-mapboxgl.accessToken = process.env.MapboxAccessToken;
+// mapboxgl.accessToken = process.env.MapboxAccessToken;
+mapboxgl.accessToken = 'pk.eyJ1IjoibWF3bWFwcCIsImEiOiJjaXQxcWFiemYwcjd3MnlwZ3d3d3NtYnN1In0.SKPELatkTwjLOFB2wyGEaQ';
 
 var fs = require('fs');
 var path = require('path');
