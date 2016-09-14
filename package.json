@@ -1,11 +1,10 @@
 {
   "name": "miamiartweek",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "eslint --no-eslintrc -c .eslintrc index.js",
-    "start" : "npm start",
-    "postinstall" : "browserify index.js | uglifyjs -c -m > bundle.js",
     "build": "browserify index.js | uglifyjs -c -m > bundle.js"
   },
   "browserify": {
@@ -15,10 +14,10 @@
     ]
   },
   "keywords": [
-    "demo",
+    "miami art week",
     "mapbox-gl-js"
   ],
-  "author": "tristen",
+  "author": "rimager",
   "license": "ISC",
   "devDependencies": {
     "brfs": "^1.4.1",
@@ -29,10 +28,15 @@
     "uglify-js": "^2.6.1"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "lodash.template": "^3.6.2",
     "raphael": "^2.1.4"
   },
-"engines": {
+  "engines": {
     "node": "4.5.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/rimager/miamiartweek/issues"
+  },
+  "homepage": "https://github.com/rimager/miamiartweek#readme"
 }
