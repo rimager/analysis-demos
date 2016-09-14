@@ -4,6 +4,7 @@ Miami Art Week Map
 Explore points of interests provided by [Mapbox](http://www.mapbox.com)
 by dragging/zooming a circle on a map.
 
+[http://miamiartweek.herokuapp.com/](http://miamiartweek.herokuapp.com/)
 
 ### Running locally
 
