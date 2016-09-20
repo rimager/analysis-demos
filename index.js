@@ -53,15 +53,15 @@ function dataBuilder(gj, type) {
 
 // Set bounds to New York, New York
 var bounds = [
-  [-74.44747924804688, 40.54198241319326], // Southwest coordinates
-  [-73.46282958984375, 40.93011520598305]  // Northeast coordinates
+  [25.770312, -80.206846], // Southwest coordinates
+  [25.868098, -80.116378]  // Northeast coordinates
 ];
 
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/cika7lsg6003p9fm1y5eet742',
   hash: true,
-  center: [-74.0015, 40.7268],
+  center: [25.815715, -80.166462],
   zoom: 14,
   maxBounds: bounds
 });

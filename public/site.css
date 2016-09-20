@@ -55,14 +55,14 @@ input[type='checkbox']:checked + label:hover:before { opacity:0.75; }
 .checkbox-pill input[type='checkbox'] + label[for='art'],
 .checkbox-pill input[type='checkbox']:checked + label[for='art'],
 .fill-art     { background-color:#d93a92; }
-.checkbox-pill input[type='checkbox'] + label[for='music'],
-.checkbox-pill input[type='checkbox']:checked + label[for='music'],
-.fill-music   { background-color:#5a4ba2; }
-.checkbox-pill input[type='checkbox'] + label[for='theatre'],
-.checkbox-pill input[type='checkbox']:checked + label[for='theatre'],
-.fill-theatre { background-color:#ffaf01; }
 .checkbox-pill input[type='checkbox'] + label[for='museum'],
 .checkbox-pill input[type='checkbox']:checked + label[for='museum'],
+.fill-music   { background-color:#5a4ba2; }
+.checkbox-pill input[type='checkbox'] + label[for='interest'],
+.checkbox-pill input[type='checkbox']:checked + label[for='interest'],
+.fill-theatre { background-color:#ffaf01; }
+.checkbox-pill input[type='checkbox'] + label[for='restaurant'],
+.checkbox-pill input[type='checkbox']:checked + label[for='restaurant'],
 .fill-museum  { background-color:#01b788; }
 .legend { box-shadow:0 1px 2px rgba(0,0,0,0.10); }
 .legend, .mapboxgl-ctrl-attrib { width:280px; }

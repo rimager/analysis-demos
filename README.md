@@ -15,6 +15,6 @@ Browse to http://localhost:9966/ to view the example!
 
 ### Building
 
-    MapboxAccessToken=<YOUR TOKEN> npm run build-demo
+    MapboxAccessToken=<YOUR TOKEN> npm run build
 
 Compiles a minified `bundle.js` for production

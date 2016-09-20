@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node server.js",
     "test": "eslint --no-eslintrc -c .eslintrc index.js",
-    "build": "browserify index.js | uglifyjs -c -m > bundle.js"
+    "build": "browserify index.js | uglifyjs -c -m > bundle.js",
+    "dev": "budo index.js --serve=bundle.js --live -d",
+    "prod": "node server.js"
   },
   "browserify": {
     "transform": [
