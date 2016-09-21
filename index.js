@@ -18,9 +18,9 @@ var $svg, lastValue = 0;
 // Data
 var data = [];
 dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/art_galleries.geojson'), 'utf8')), 'art');
-dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/classical_music.geojson'), 'utf8')), 'music');
-dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/museums.geojson'), 'utf8')), 'museum');
-dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/theatres.geojson'), 'utf8')), 'theatre');
+// dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/classical_music.geojson'), 'utf8')), 'music');
+// dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/museums.geojson'), 'utf8')), 'museum');
+// dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/theatres.geojson'), 'utf8')), 'theatre');
 
 // Layer style
 var dataStyle = JSON.parse(fs.readFileSync(path.join(__dirname, '/data/style.json'), 'utf8'));
@@ -53,17 +53,18 @@ function dataBuilder(gj, type) {
 
 // Set bounds to New York, New York
 var bounds = [
-  [25.770312, -80.206846], // Southwest coordinates
-  [25.868098, -80.116378]  // Northeast coordinates
+  [-80.547011, 25.611021], // Southwest coordinates
+  [-79.828325, 26.024328]  // Northeast coordinates
 ];
 
+
 var map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/cika7lsg6003p9fm1y5eet742',
-  hash: true,
-  center: [25.815715, -80.166462],
-  zoom: 14,
-  maxBounds: bounds
+    container: 'map',
+    style: 'mapbox://styles/mapbox/cika7lsg6003p9fm1y5eet742',
+    hash: true,
+    center: [-80.170099, 25.785522],
+    zoom: 12,
+    maxBounds: bounds
 });
 
 // Create a popup, but don't add it to the map yet.
