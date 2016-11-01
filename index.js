@@ -18,14 +18,17 @@ var $svg, lastValue = 0;
 // Data
 var data = [];
 dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/art_galleries.geojson'), 'utf8')), 'art');
-dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/restaurants.geojson'), 'utf8')), 'music');
-// dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/museums.geojson'), 'utf8')), 'museum');
-// dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/theatres.geojson'), 'utf8')), 'theatre');
+dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/classical_music.geojson'), 'utf8')), 'music');
+dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/museums.geojson'), 'utf8')), 'museum');
+dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/theatres.geojson'), 'utf8')), 'theatre');
+
+console.log(data);
 
 // Layer style
 var dataStyle = JSON.parse(fs.readFileSync(path.join(__dirname, '/data/style.json'), 'utf8'));
 
-var pois = ['poi-art', 'poi-restaurant', 'poi-theatre', 'poi-museum'];
+var pois = ['poi-art', 'poi-music', 'poi-theatre', 'poi-museum'];
+
 
 function phoneFormatted(phone) {
   return phone
@@ -51,7 +54,7 @@ function dataBuilder(gj, type) {
   });
 }
 
-// Set bounds to New York, New York
+// Set bounds to Miami
 var bounds = [
   [-80.547011, 25.611021], // Southwest coordinates
   [-79.828325, 26.024328]  // Northeast coordinates
@@ -66,6 +69,7 @@ var map = new mapboxgl.Map({
     zoom: 12,
     maxBounds: bounds
 });
+
 
 // Create a popup, but don't add it to the map yet.
 var popup = new mapboxgl.Popup({
@@ -87,6 +91,8 @@ function addData() {
   });
 
   dataStyle.forEach(function(style) {
+	console.dir(dataStyle);
+	console.dir(style);
     map.addLayer(style);
   });
 }
@@ -226,6 +232,7 @@ map.once('source.change', function(ev) {
 
   document.getElementById('filter-categories').addEventListener('change', function(e) {
     var id = 'poi-' + e.target.id;
+	console.log(id);
     var display = (e.target.checked) ? 'visible' : 'none';
     map.setLayoutProperty(id, 'visibility', display);
     window.setTimeout(getFeatures, 500);

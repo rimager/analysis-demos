@@ -1,12 +1,12 @@
 [
   {
-    "id": "poi-restaurant",
+    "id": "poi-museum",
     "interactive": true,
     "type": "symbol",
     "source": "geojson",
     "filter": [
       "all",
-      ["in", "type", "restaurant"]
+      ["in", "type", "museum"]
     ],
     "layout": {
       "icon-image": "{type}",

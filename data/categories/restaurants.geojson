@@ -44,10 +44,5 @@
 { "type": "Feature", "properties": { "NAME": "Garcia's Sea Food Grill", "TEL": "305.375.0765", "URL": "garciasseafoodgrill.com", "ADDRESS1": "398 NW North River Drive", "ADDRESS2": null, "CITY": "Miami", "ZIP": 33128 }, "geometry": { "type": "Point", "coordinates": [ -80.203734, 25.777399 ] } },
 { "type": "Feature", "properties": { "NAME": "The River Seafood Oyster Bar", "TEL": "305.530.1915", "URL": "therivermiami.com", "ADDRESS1": "650 S Miami Avenue", "ADDRESS2": null, "CITY": "Miami", "ZIP": 33131 }, "geometry": { "type": "Point", "coordinates": [ -80.193467, 25.767498 ] } },
 { "type": "Feature", "properties": { "NAME": "Toro Toro Miami", "TEL": "305.372.4710", "URL": "torotoromiami.com", "ADDRESS1": "100 Chopin Plaza", "ADDRESS2": null, "CITY": "Miami", "ZIP": 33132 }, "geometry": { "type": "Point", "coordinates": [ -80.185336, 25.772558 ] } }
-
-
-
-
-	
 ]
 }
