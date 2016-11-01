@@ -6,15 +6,22 @@ by dragging/zooming a circle on a map.
 
 [http://miamiartweek.herokuapp.com/](http://miamiartweek.herokuapp.com/)
 
-### Running locally
-
-    npm install
-    MapboxAccessToken=<YOUR TOKEN> npm start
-
-Browse to http://localhost:9966/ to view the example!
 
 ### Building
 
-    MapboxAccessToken=<YOUR TOKEN> npm run build
+    npm run build
 
 Compiles a minified `bundle.js` for production
+
+    Move bundle.js
+
+### Running locally
+    node server.js
+
+	Browse to http://localhost:5000/ to view the app
+
+	
+### Deploying	
+git push origin master
+
+git push heroku master
