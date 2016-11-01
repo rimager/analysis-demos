@@ -18,14 +18,14 @@ var $svg, lastValue = 0;
 // Data
 var data = [];
 dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/art_galleries.geojson'), 'utf8')), 'art');
-// dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/classical_music.geojson'), 'utf8')), 'music');
+dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/restaurants.geojson'), 'utf8')), 'music');
 // dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/museums.geojson'), 'utf8')), 'museum');
 // dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/theatres.geojson'), 'utf8')), 'theatre');
 
 // Layer style
 var dataStyle = JSON.parse(fs.readFileSync(path.join(__dirname, '/data/style.json'), 'utf8'));
 
-var pois = ['poi-art', 'poi-music', 'poi-theatre', 'poi-museum'];
+var pois = ['poi-art', 'poi-restaurant', 'poi-theatre', 'poi-museum'];
 
 function phoneFormatted(phone) {
   return phone
