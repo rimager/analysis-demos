@@ -22,7 +22,6 @@ dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/cl
 dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/museums.geojson'), 'utf8')), 'museum');
 dataBuilder(JSON.parse(fs.readFileSync(path.join(__dirname, '/data/categories/theatres.geojson'), 'utf8')), 'theatre');
 
-console.log(data);
 
 // Layer style
 var dataStyle = JSON.parse(fs.readFileSync(path.join(__dirname, '/data/style.json'), 'utf8'));
@@ -71,6 +70,7 @@ var map = new mapboxgl.Map({
 });
 
 
+
 // Create a popup, but don't add it to the map yet.
 var popup = new mapboxgl.Popup({
   closeButton: false
@@ -91,8 +91,6 @@ function addData() {
   });
 
   dataStyle.forEach(function(style) {
-	console.dir(dataStyle);
-	console.dir(style);
     map.addLayer(style);
   });
 }
@@ -158,14 +156,15 @@ function initialize() {
   $svg = paper.canvas;
 
   var circleStyle = {
-    fill: '#027dbd',
-    stroke: '#027dbd'
+    fill: '#59d9d4',
+    stroke: '#59d9d4'
   };
 
   circleStyle['stroke-width'] = 3;
   circleStyle['fill-opacity'] = 0.1;
 
   var c = paper.circle(100, 100, 93).attr(circleStyle);
+  
 
   // Canvas movement shaping
   function start() {
@@ -232,7 +231,6 @@ map.once('source.change', function(ev) {
 
   document.getElementById('filter-categories').addEventListener('change', function(e) {
     var id = 'poi-' + e.target.id;
-	console.log(id);
     var display = (e.target.checked) ? 'visible' : 'none';
     map.setLayoutProperty(id, 'visibility', display);
     window.setTimeout(getFeatures, 500);
@@ -275,5 +273,100 @@ map.on('mousemove', function(e) {
     showPopup(features[0]);
   });
 });
+
+function aobm(){
+//map.setZoom(5);
+map.flyTo({
+  zoom: 5,
+  speed: 1.2,
+  curve: 1,
+  easing: function(t) {
+    return t;
+  }
+});
+}
+
+function miamibeach(){
+map.flyTo({
+  zoom: 12,
+  center: [-80.131841, 25.804411],
+  speed: 1.2,
+  curve: 1,
+  easing: function(t) {
+    return t;
+  }
+});
+}
+
+function miamibeach(){
+map.flyTo({
+  zoom: 12,
+  center: [-80.131841, 25.804411],
+  speed: 1.2,
+  curve: 1,
+  easing: function(t) {
+    return t;
+  }
+});
+}
+
+function wynwood(){
+map.flyTo({
+  zoom: 15,
+  center: [-80.199057, 25.804994],
+  speed: 1.2,
+  curve: 1,
+  easing: function(t) {
+    return t;
+  }
+});
+}
+
+function midtown(){
+map.flyTo({
+  zoom: 15,
+  center: [-80.192927, 25.807552],
+  speed: 1.2,
+  curve: 1,
+  easing: function(t) {
+    return t;
+  }
+});
+}
+
+function downtown(){
+map.flyTo({
+  zoom: 14,
+  center: [-80.193625, 25.779384],
+  speed: 1.2,
+  curve: 1,
+  easing: function(t) {
+    return t;
+  }
+});
+}
+
+function all(){
+map.flyTo({
+  zoom: 4,
+  center: [0, 0],
+  speed: 1.2,
+  curve: 1,
+  easing: function(t) {
+    return t;
+  }
+});
+}
+
+
+$('.all').click(all);
+$('.miamibeach').click(miamibeach);
+$('.wynwood').click(wynwood);
+$('.midtown').click(midtown);
+$('.downtown').click(downtown);
+$('.aobm').click(aobm);
+
+    
+
 
 (initialize)();

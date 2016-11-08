@@ -13,7 +13,6 @@ by dragging/zooming a circle on a map.
 
 Compiles a minified `bundle.js` for production
 
-    Move bundle.js
 
 ### Running locally
     node server.js
