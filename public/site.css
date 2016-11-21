@@ -189,6 +189,10 @@ body {
   /*height: 144px;*/
 }
 
+.navbar-sponsors img {
+    max-width: 114px;
+}
+
 
 }
 
