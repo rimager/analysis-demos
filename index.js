@@ -366,6 +366,11 @@ $('.midtown').click(midtown);
 $('.downtown').click(downtown);
 $('.aobm').click(aobm);
 
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+});
     
 
 
