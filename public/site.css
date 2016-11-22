@@ -190,9 +190,12 @@ body {
 }
 
 .navbar-sponsors img {
-    max-width: 114px;
+    max-width: 30%;
 }
 
+.navbar-brand{
+  max-width: 80%;
+}
 
 }
 

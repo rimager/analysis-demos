@@ -243,6 +243,7 @@ map.on('style.load', addData);
 map.on('moveend', getFeatures);
 
 map.on('click', function(e) {
+  // console.log("map.on(click)");
   map.featuresAt(e.point, {
     radius: 7.5,
     includeGeometry: true,
@@ -258,6 +259,7 @@ map.on('click', function(e) {
 });
 
 map.on('mousemove', function(e) {
+  // console.log("onmousemove");
   map.featuresAt(e.point, {
     radius: 7.5,
     includeGeometry: true,
@@ -275,7 +277,16 @@ map.on('mousemove', function(e) {
 });
 
 function aobm(){
-//map.setZoom(5);
+//map.setZoom(5);\\\
+
+//hide other art fairs
+$('#art').attr('checked', false); // Unchecks it
+var id = 'poi-art';
+var display = 'none';
+map.setLayoutProperty(id, 'visibility', display);
+window.setTimeout(getFeatures, 500);
+
+
 map.flyTo({
   zoom: 5,
   speed: 1.2,
@@ -286,19 +297,16 @@ map.flyTo({
 });
 }
 
-function miamibeach(){
-map.flyTo({
-  zoom: 12,
-  center: [-80.131841, 25.804411],
-  speed: 1.2,
-  curve: 1,
-  easing: function(t) {
-    return t;
-  }
-});
-}
 
 function miamibeach(){
+
+//make sure all art fairs show
+$('#art').attr('checked', true); // Unchecks it
+var id = 'poi-art';
+var display = 'visible';
+map.setLayoutProperty(id, 'visibility', display);
+window.setTimeout(getFeatures, 500);
+
 map.flyTo({
   zoom: 12,
   center: [-80.131841, 25.804411],
@@ -311,6 +319,14 @@ map.flyTo({
 }
 
 function wynwood(){
+
+//make sure all art fairs show
+$('#art').attr('checked', true); // Unchecks it
+var id = 'poi-art';
+var display = 'visible';
+map.setLayoutProperty(id, 'visibility', display);
+window.setTimeout(getFeatures, 500);
+
 map.flyTo({
   zoom: 15,
   center: [-80.199057, 25.804994],
@@ -323,6 +339,14 @@ map.flyTo({
 }
 
 function midtown(){
+
+//make sure all art fairs show
+$('#art').attr('checked', true); // Unchecks it
+var id = 'poi-art';
+var display = 'visible';
+map.setLayoutProperty(id, 'visibility', display);
+window.setTimeout(getFeatures, 500);
+
 map.flyTo({
   zoom: 15,
   center: [-80.192927, 25.807552],
@@ -335,6 +359,14 @@ map.flyTo({
 }
 
 function downtown(){
+
+//make sure all art fairs show
+$('#art').attr('checked', true); // Unchecks it
+var id = 'poi-art';
+var display = 'visible';
+map.setLayoutProperty(id, 'visibility', display);
+window.setTimeout(getFeatures, 500);
+
 map.flyTo({
   zoom: 14,
   center: [-80.193625, 25.779384],
@@ -347,6 +379,14 @@ map.flyTo({
 }
 
 function all(){
+
+//make sure all art fairs show
+$('#art').attr('checked', true); // Unchecks it
+var id = 'poi-art';
+var display = 'visible';
+map.setLayoutProperty(id, 'visibility', display);
+window.setTimeout(getFeatures, 500);
+
 map.flyTo({
   zoom: 4,
   center: [0, 0],
