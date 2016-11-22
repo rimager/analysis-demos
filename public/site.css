@@ -235,7 +235,7 @@ body {
 
 .navbar-brand {
     height: 80px;
-    padding: 10px 10px;
+    /*padding: 10px 10px;*/
 }
 
 .navbar-inverse {
@@ -257,12 +257,14 @@ body {
 	background-color:#333333;
 	z-index: 3;
 	color: #FFF;
+	padding: 3px;
 }
 
 .footer img{
 	margin: 0 10px;
   max-height: 60px;
-}
+  max-width:16%;
+  }
 
 .sidebar svg, .sidebar img{
 max-width: 150px;
