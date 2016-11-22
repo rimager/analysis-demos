@@ -267,13 +267,24 @@ body {
   }
 
 .sidebar svg, .sidebar img{
-max-width: 150px;
+max-width: 100%;
 display:block;
 margin: 0 auto;
+}
+
+.nav>li>a>img {
+    max-width: 100%;
 }
 
 #about{
 display:none;
 z-index:999;
+    position: relative;
+    min-height: 800px;
+    padding: 0;
+}
+
+.about-box img{
+	width: 30%;
 }
 
