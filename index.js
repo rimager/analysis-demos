@@ -65,8 +65,8 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/cika7lsg6003p9fm1y5eet742',
     hash: true,
     center: [-80.170099, 25.785522],
-    zoom: 12,
-    maxBounds: bounds
+    zoom: 12
+    // maxBounds: bounds
 });
 
 
