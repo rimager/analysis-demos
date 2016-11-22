@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset='utf-8' />
-    <title>Miami Art Week</title>
+<meta charset='utf-8' />
+<title>Miami Art Week</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href='site.css' rel='stylesheet' />
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+<link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href='site.css' rel='stylesheet' />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body class='clip loading'>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <a class="navbar-brand" href="/">
-                        <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 629 87.5" style="enable-background:new 0 0 629 87.5;" xml:space="preserve">
-                            <style type="text/css">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="/">
+      <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 629 87.5" style="enable-background:new 0 0 629 87.5;" xml:space="preserve">
+        <style type="text/css">
                             .st0 {
                                 fill: #FFFFFF;
                             }
                             </style>
-                            <title>horizontal white</title>
-                            <g id="Layer_2">
-                                <g id="Layer_1-2">
-                                    <path class="st0" d="M41.6,0h14.9v87.5h-15v-43l-6,22.2H20.9L15,44.5v43H0V0h14.9l13.4,42.2L41.6,0z M6.9,7.8L1.1,2v83.4l5.8-5.8
+        <title>horizontal white</title>
+        <g id="Layer_2">
+          <g id="Layer_1-2">
+            <path class="st0" d="M41.6,0h14.9v87.5h-15v-43l-6,22.2H20.9L15,44.5v43H0V0h14.9l13.4,42.2L41.6,0z M6.9,7.8L1.1,2v83.4l5.8-5.8
             V7.8z M7.4,6.5l5.5-5.4H2L7.4,6.5z M2.2,86L2,86.2h0.4L2.2,86z M3.1,85.2l1,1h3.5l-2.8-2.8L3.1,85.2z M5.6,82.6l3.8,3.6h3.4
             l-5.4-5.4L5.6,82.6z M8.1,10.8v1.6l0.4,0.5L8.1,10.8z M8.1,17.6l1.6,1.6L8.9,15l-0.8-0.9V17.6z M8.1,22.8l2.9,3l-0.9-4.4l-2-2.1
             L8.1,22.8z M8.1,28l4.1,4.1l-0.8-4.2l-3.4-3.4V28z M8.1,33.1l5.4,5.5l-0.8-4.4l-4.6-4.6V33.1z M8.1,38.4l5.6,5.6v-3.5l-5.6-5.6
@@ -66,7 +65,7 @@
             L49.6,59.2z M49.6,64.3l5.6,5.7v-3.5l-5.6-5.8V64.3z M49.6,69.5l5.6,5.6v-3.4L49.6,66V69.5z M49.6,74.7l5.6,5.8v-3.5l-5.6-5.8
             L49.6,74.7z M49.6,79.9l5.6,5.6v-3.4l-5.6-5.8L49.6,79.9z M49.8,7.4l5.5,5.5V9.5l-3.8-3.9L49.8,7.4z M52.4,4.8l2.9,3V4.2l-1.1-1.1
             L52.4,4.8z M55,2.2l0.2,0.4V1.9L55,2.2z"></path>
-                                    <path class="st0" d="M64,0h15v87.5H64V0z M70.9,7.8L65.2,2v83.4l5.6-5.8V7.8z M71.5,6.5l5.4-5.4H66.1L71.5,6.5z M66.2,86l-0.1,0.2
+            <path class="st0" d="M64,0h15v87.5H64V0z M70.9,7.8L65.2,2v83.4l5.6-5.8V7.8z M71.5,6.5l5.4-5.4H66.1L71.5,6.5z M66.2,86l-0.1,0.2
             h0.4L66.2,86z M67.1,85.2l1,1h3.5l-2.8-2.8L67.1,85.2z M69.8,82.6l3.6,3.6h3.5l-5.4-5.4L69.8,82.6z M72.1,12.4l5.8,5.8v-3.5
             l-5.8-5.7L72.1,12.4z M72.1,17.6l5.8,5.6v-3.4l-5.8-5.8V17.6z M72.1,22.8l5.8,5.8V25l-5.8-5.8V22.8z M72.1,28l5.8,5.6v-3.4
             l-5.8-5.8L72.1,28z M72.1,33.1l5.8,5.8v-3.5l-5.8-5.8V33.1z M72.1,38.4l5.7,5.6v-3.4l-5.8-5.8L72.1,38.4z M72.1,43.5l5.8,5.8v-3.5
@@ -74,7 +73,7 @@
             l-5.8-5.8V59.2z M72.1,64.3l5.7,5.7v-3.5l-5.8-5.8L72.1,64.3z M72.1,69.5l5.8,5.6v-3.4L72.1,66L72.1,69.5z M72.1,71.2v3.5l5.8,5.8
             v-3.5L72.1,71.2z M72.1,79.9l5.8,5.6v-3.4l-5.8-5.8V79.9z M72.3,7.4l5.6,5.5V9.5L74,5.6L72.3,7.4z M74.9,4.9l3,2.9V4.2l-1.3-1.1
             L74.9,4.9z M77.5,2.2l0.4,0.4V1.9L77.5,2.2z"></path>
-                                    <path class="st0" d="M130.5,87.5h-15.1v-26h-10.9v26h-15V9.2c0-5.1,4.1-9.2,9.2-9.2c0,0,0,0,0,0h22.5c5.1,0,9.2,4.2,9.2,9.2V87.5z
+            <path class="st0" d="M130.5,87.5h-15.1v-26h-10.9v26h-15V9.2c0-5.1,4.1-9.2,9.2-9.2c0,0,0,0,0,0h22.5c5.1,0,9.2,4.2,9.2,9.2V87.5z
              M92.6,4c-1.3,1.4-2,3.3-2,5.2v76.1l5.8-5.8V7.8L92.6,4z M91.8,86l-0.2,0.2h0.4L91.8,86z M92.6,85.2l1,1h3.5l-2.8-2.8L92.6,85.2z
              M98.8,1.1c-1.9,0-3.8,0.7-5.2,2l3.8,3.8h25.2l3.9-3.9c-1.4-1.2-3.3-1.8-5.1-1.9H98.8z M95.1,82.6l3.8,3.6h3.4l-5.4-5.4L95.1,82.6
             z M103.2,14.6l-5.6-5.7v3.5l5.6,5.8L103.2,14.6z M97.6,17.6l5.6,5.6v-3.4l-5.6-5.8V17.6z M97.6,22.8l5.6,5.8V25l-5.6-5.8V22.8z
@@ -93,7 +92,7 @@
             V48.8z M123.5,53.9l5.8,5.8v-3.5l-5.8-5.8V53.9z M123.5,59.2l5.8,5.6v-3.4l-5.8-5.8V59.2z M123.5,64.3l5.7,5.7v-3.5l-5.8-5.8
             L123.5,64.3z M123.5,69.6l5.8,5.6v-3.4l-5.8-5.8L123.5,69.6z M123.5,74.7l5.8,5.8v-3.5l-5.8-5.8V74.7z M123.5,79.9l5.8,5.6v-3.4
             l-5.8-5.8V79.9z M123.8,7.4l5.5,5.5V9.5l-3.8-3.9L123.8,7.4z M126.3,4.8l2.9,2.9c-0.3-1.4-1-2.7-1.9-3.8L126.3,4.8z"></path>
-                                    <path class="st0" d="M179.6,0h14.9v87.5h-15v-43l-6,22.2h-14.6L153,44.5v43h-15V0h14.9l13.4,42.2L179.6,0z M144.9,7.8L139.1,2
+            <path class="st0" d="M179.6,0h14.9v87.5h-15v-43l-6,22.2h-14.6L153,44.5v43h-15V0h14.9l13.4,42.2L179.6,0z M144.9,7.8L139.1,2
             v83.4l5.8-5.8V7.8z M145.4,6.5l5.5-5.4H140L145.4,6.5z M140.2,86l-0.2,0.2h0.4L140.2,86z M141.1,85.2l1,1h3.5l-2.8-2.8L141.1,85.2
             z M143.6,82.6l3.8,3.6h3.4l-5.4-5.4L143.6,82.6z M146.1,10.8v1.6l0.4,0.5L146.1,10.8z M146.1,17.6l1.6,1.6l-0.9-4.3l-0.8-0.9
             L146.1,17.6z M146.1,22.8l2.9,3l-0.9-4.4l-2-2.1L146.1,22.8z M146.1,28l4.1,4.1l-0.8-4.2l-3.4-3.4L146.1,28z M146.1,33.1l5.4,5.5
@@ -119,7 +118,7 @@
             l5.6,5.7v-3.5l-5.6-5.8V64.3z M187.6,69.5l5.6,5.6v-3.4l-5.6-5.8L187.6,69.5z M187.6,74.7l5.6,5.8v-3.5l-5.6-5.8L187.6,74.7z
              M187.6,79.9l5.6,5.6v-3.4l-5.6-5.8L187.6,79.9z M187.8,7.4l5.5,5.5V9.5l-3.8-3.9L187.8,7.4z M190.4,4.8l2.9,3V4.2l-1.1-1.1
             L190.4,4.8z M193,2.2l0.2,0.4V1.9L193,2.2z"></path>
-                                    <path class="st0" d="M202,0h15v87.5h-15V0z M208.9,7.8L203.2,2v83.4l5.6-5.8L208.9,7.8z M209.5,6.5l5.4-5.4h-10.8L209.5,6.5z
+            <path class="st0" d="M202,0h15v87.5h-15V0z M208.9,7.8L203.2,2v83.4l5.6-5.8L208.9,7.8z M209.5,6.5l5.4-5.4h-10.8L209.5,6.5z
              M204.2,86l-0.1,0.2h0.4L204.2,86z M205.1,85.2l1,1h3.5l-2.8-2.8L205.1,85.2z M207.8,82.6l3.6,3.6h3.5l-5.4-5.4L207.8,82.6z
              M210.1,12.4l5.8,5.8v-3.5l-5.8-5.8V12.4z M210.1,17.6l5.8,5.6v-3.4l-5.8-5.8V17.6z M210.1,22.8l5.8,5.8V25l-5.8-5.8V22.8z
              M210.1,28l5.8,5.6v-3.4l-5.8-5.8V28z M210.1,33.1l5.8,5.8v-3.5l-5.8-5.8V33.1z M210.1,38.4l5.7,5.6v-3.4l-5.8-5.8L210.1,38.4z
@@ -127,7 +126,7 @@
              M210.1,59.2l5.8,5.6v-3.4l-5.8-5.8V59.2z M210.1,64.3l5.7,5.7v-3.5l-5.8-5.8L210.1,64.3z M210.1,69.5l5.8,5.6v-3.4l-5.8-5.8
             L210.1,69.5z M210.1,71.2v3.5l5.8,5.8v-3.5L210.1,71.2z M210.1,79.9l5.8,5.6v-3.4l-5.8-5.8V79.9z M210.3,7.4l5.6,5.5V9.5L212,5.6
             L210.3,7.4z M212.9,4.9l3,2.9V4.2l-1.2-1.1L212.9,4.9z M215.5,2.3l0.4,0.4V1.9L215.5,2.3z"></path>
-                                    <path class="st0" d="M290,87.5h-15.1v-26H264v26h-15V9.2c0-5.1,4.1-9.2,9.2-9.2c0,0,0,0,0,0h22.5c5.1,0,9.2,4.2,9.3,9.2V87.5z
+            <path class="st0" d="M290,87.5h-15.1v-26H264v26h-15V9.2c0-5.1,4.1-9.2,9.2-9.2c0,0,0,0,0,0h22.5c5.1,0,9.2,4.2,9.3,9.2V87.5z
              M252.1,4c-1.3,1.4-2,3.3-2,5.2v76.1l5.8-5.8V7.8L252.1,4z M251.2,86l-0.2,0.2h0.4L251.2,86z M252.1,85.2l1,1h3.5l-2.8-2.8
             L252.1,85.2z M258.2,1.1c-1.9,0-3.8,0.7-5.2,2l3.8,3.8H282l3.9-3.9c-1.4-1.2-3.3-1.8-5.1-1.9L258.2,1.1z M254.6,82.6l3.8,3.6h3.4
             l-5.4-5.4L254.6,82.6z M262.8,14.6l-5.6-5.8v3.5l5.6,5.8L262.8,14.6z M257.1,17.6l5.6,5.6v-3.4l-5.6-5.8L257.1,17.6z M257.1,22.8
@@ -146,7 +145,7 @@
             l-5.8-5.8V48.8z M283,53.9l5.8,5.8v-3.5l-5.8-5.8V53.9z M283,59.1l5.8,5.6v-3.4l-5.8-5.8V59.1z M283,64.3l5.7,5.7v-3.5l-5.7-5.8
             V64.3z M283,69.5l5.8,5.6v-3.4L283,66V69.5z M283,74.7l5.8,5.8v-3.5l-5.8-5.8V74.7z M283,79.9l5.8,5.6v-3.4l-5.8-5.8V79.9z
              M283.2,7.4l5.5,5.5V9.5L285,5.6L283.2,7.4z M285.8,4.8l2.9,2.9c-0.3-1.4-1-2.7-1.9-3.8L285.8,4.8z"></path>
-                                    <path class="st0" d="M325.9,87.5l-6.1-36.4H314v36.4h-15V0h31.8c5.1,0,9.2,4.2,9.1,9.2V42c0,3.5-2,6.8-5.2,8.2l6.2,37.2H325.9z
+            <path class="st0" d="M325.9,87.5l-6.1-36.4H314v36.4h-15V0h31.8c5.1,0,9.2,4.2,9.1,9.2V42c0,3.5-2,6.8-5.2,8.2l6.2,37.2H325.9z
              M300.1,85.4l5.8-5.6v-72l-5.8-5.6V85.4z M335.9,3.1c-1.4-1.2-3.2-1.9-5.1-1.9H301l5.8,5.6H332L335.9,3.1z M301.2,86l-0.2,0.2h0.4
             L301.2,86z M302.1,85.2l1,1h3.5l-2.8-2.8L302.1,85.2z M304.6,82.6l3.8,3.6h3.4l-5.4-5.4L304.6,82.6z M312.8,14.8L307.1,9v3.5
             l5.6,5.6L312.8,14.8z M307.1,17.6l5.6,5.8v-3.5l-5.6-5.8L307.1,17.6z M307.1,22.9l5.6,5.6V25l-5.6-5.6L307.1,22.9z M312.8,30.3
@@ -165,7 +164,7 @@
             v-3.5l-5.8-5.8V17.6z M333,22.9l5.8,5.6V25l-5.8-5.6V22.9z M333,28l5.8,5.8v-3.5l-5.8-5.8V28z M333,33.2l5.8,5.6v-3.5l-5.8-5.6
             V33.2z M333,34.9v3.5l5.5,5.5c0.1-0.6,0.2-1.2,0.2-1.9v-1.4L333,34.9z M336.8,47.3c0.5-0.6,1-1.4,1.2-2.1l-5-5v3.4L336.8,47.3z
              M334.9,5.8l-1.6,1.7l5.5,5.5V9.5L334.9,5.8z M338.5,7.6c-0.3-1.4-0.9-2.7-1.8-3.8l-1,1L338.5,7.6z"></path>
-                                    <path class="st0" d="M376.7,15v72.5h-15.1V15h-15.5V0h46.1v15H376.7z M352.7,7.4L347.2,2v10.8L352.7,7.4z M348.4,13.5l-0.4,0.2
+            <path class="st0" d="M376.7,15v72.5h-15.1V15h-15.5V0h46.1v15H376.7z M352.7,7.4L347.2,2v10.8L352.7,7.4z M348.4,13.5l-0.4,0.2
             h0.8L348.4,13.5z M384.4,6.9l5.6-5.8h-41.9l5.8,5.8L384.4,6.9z M349.2,12.6l1.1,1.1h3.5l-2.9-2.9L349.2,12.6z M351.8,10l3.9,3.8
             h3.5l-5.6-5.5L351.8,10z M360.8,13.8h1.1l1.1-1.1l-4.5-4.5h-3.4L360.8,13.8z M365.6,10l-1.9-1.9h-3.5l3.6,3.6L365.6,10z
              M362.9,14.5v70.9l5.8-5.8V8.8L362.9,14.5z M363.9,86l-0.1,0.2h0.4L363.9,86z M364.7,85.2l1.1,1h3.4l-2.8-2.8L364.7,85.2z
@@ -177,7 +176,7 @@
             l-5.8-5.8V74.7z M369.8,79.9l5.8,5.6V82l-5.8-5.6V79.9z M376.4,13.8h3.5l-5.8-5.6h-3.5L376.4,13.8z M379.3,8.2h-3.4l5.6,5.6h3.5
             L379.3,8.2z M384.5,8.2H381l5.8,5.6h3.5L384.5,8.2z M385.5,7.4l5.5,5.5V9.5l-3.8-3.9L385.5,7.4z M388.1,4.8l2.9,3V4.2l-1.1-1.1
             L388.1,4.8z M390.8,2.3l0.2,0.4V1.9L390.8,2.3z"></path>
-                                    <path class="st0" d="M470.6,0h15.1l-2.4,87.5h-28.5L451,51.4l-3.9,36.1h-28.6L416.2,0h15l1.2,72.4h1.6L443.5,0h14.9l9.6,72.4h1.5
+            <path class="st0" d="M470.6,0h15.1l-2.4,87.5h-28.5L451,51.4l-3.9,36.1h-28.6L416.2,0h15l1.2,72.4h1.6L443.5,0h14.9l9.6,72.4h1.5
             L470.6,0z M417.5,2.1l2.1,83.2l5.2-5.6l-1.9-72L417.5,2.1z M423.6,6.6l5.4-5.5h-10.8L423.6,6.6z M422.5,84l-2,2.2h4.2L422.5,84z
              M423.2,83.1l3.1,3.1h3.5l-4.9-4.9L423.2,83.1z M424.2,8l0.1,3.5l6,6l-0.1-3.5L424.2,8z M430.4,19.3l-6-5.9l0.1,3.5l5.9,6
             L430.4,19.3z M430.4,24.5l-5.9-5.9l0.1,3.6l5.9,5.9L430.4,24.5z M430.5,29.9l-5.9-5.9l0.1,3.5l5.9,5.9L430.5,29.9z M430.6,35.1
@@ -209,7 +208,7 @@
             L478.4,25.9z M478.6,24.3l5.2,5.2l0.1-3.4l-5.4-5.4L478.6,24.3z M478.7,19.2l5.2,5.2L484,21l-5.4-5.2L478.7,19.2z M478.8,14.2
             l5.2,5.2l0.1-3.4l-5.4-5.4L478.8,14.2z M478.9,9l5.2,5.2l0.1-3.4L480,6.6l-1.1,1.1L478.9,9z M482.5,4l-1.8,1.8l3.5,3.5l0.1-3.4
             L482.5,4z M483.4,3.2l1,1l0.1-2.1L483.4,3.2z"></path>
-                                    <path class="st0" d="M533.1,72.4v15.1h-41V0h41v15h-26v21.1h20.8v15h-20.8v21.2H533.1z M493.2,2v83.4l5.8-5.8V7.8L493.2,2z
+            <path class="st0" d="M533.1,72.4v15.1h-41V0h41v15h-26v21.1h20.8v15h-20.8v21.2H533.1z M493.2,2v83.4l5.8-5.8V7.8L493.2,2z
              M525.1,6.9l5.8-5.8h-36.8l5.8,5.8H525.1z M494.4,86l-0.2,0.2h0.4L494.4,86z M495.2,85.2l1,1h3.5l-2.7-2.8L495.2,85.2z
              M497.7,82.6l3.8,3.6h3.4l-5.4-5.4L497.7,82.6z M505.9,18.1v-3.5l-5.6-5.8v3.5L505.9,18.1z M500.2,17.6l5.6,5.6v-3.4l-5.6-5.8
             L500.2,17.6z M500.2,22.8l5.6,5.8V25l-5.6-5.8L500.2,22.8z M500.2,24.5V28l5.6,5.6v-3.4L500.2,24.5z M504.8,37.6l1.1-1.1v-1.1
@@ -225,7 +224,7 @@
              M525.5,39.4l-1.8,1.8l2.9,2.9v-3.4L525.5,39.4z M526.4,7.4l5.5,5.5V9.5l-3.8-3.9L526.4,7.4z M526.6,38.9v-0.8l-0.2,0.4
             L526.6,38.9z M526.4,80l5.5,5.5v-3.4l-3.9-3.9L526.4,80z M528.9,4.8l3,3V4.2l-1.2-1.1L528.9,4.8z M528.9,77.4l3,3v-3.5l-1.2-1.2
             L528.9,77.4z M531.5,2.3l0.4,0.4V1.9L531.5,2.3z M531.9,74.5l-0.4,0.4l0.4,0.2L531.9,74.5z"></path>
-                                    <path class="st0" d="M580.1,72.4v15.1h-41V0h41v15h-26v21.1h20.8v15h-20.8v21.2H580.1z M540.2,2v83.4l5.8-5.8V7.8L540.2,2z
+            <path class="st0" d="M580.1,72.4v15.1h-41V0h41v15h-26v21.1h20.8v15h-20.8v21.2H580.1z M540.2,2v83.4l5.8-5.8V7.8L540.2,2z
              M572.1,6.9l5.8-5.8h-36.8l5.8,5.8H572.1z M541.4,86l-0.2,0.2h0.4L541.4,86z M542.2,85.2l1,1h3.5l-2.7-2.8L542.2,85.2z
              M544.7,82.6l3.8,3.6h3.4l-5.4-5.4L544.7,82.6z M552.9,18.1v-3.5l-5.6-5.8v3.5L552.9,18.1z M547.2,17.6l5.6,5.6v-3.4l-5.6-5.8
             L547.2,17.6z M547.2,22.8l5.6,5.8V25l-5.6-5.8L547.2,22.8z M547.2,24.5V28l5.6,5.6v-3.4L547.2,24.5z M551.8,37.6l1.1-1.1v-1.1
@@ -241,7 +240,7 @@
              M572.5,39.4l-1.8,1.8l2.9,2.9v-3.4L572.5,39.4z M573.4,7.4l5.5,5.5V9.5l-3.8-3.9L573.4,7.4z M573.6,38.9v-0.8l-0.2,0.4
             L573.6,38.9z M573.4,80l5.5,5.5v-3.4l-3.9-3.9L573.4,80z M575.9,4.8l3,3V4.2l-1.2-1.1L575.9,4.8z M575.9,77.4l3,3v-3.5l-1.2-1.2
             L575.9,77.4z M578.5,2.3l0.4,0.4V1.9L578.5,2.3z M578.9,74.5l-0.4,0.4l0.4,0.2L578.9,74.5z"></path>
-                                    <path class="st0" d="M615,43.6l14,43.9h-15.1l-0.1-0.5l-11.3-35.9h-1.4v36.4h-15V0h15v36.1h1.1L613.7,0H629L615,43.6z M593,7.8
+            <path class="st0" d="M615,43.6l14,43.9h-15.1l-0.1-0.5l-11.3-35.9h-1.4v36.4h-15V0h15v36.1h1.1L613.7,0H629L615,43.6z M593,7.8
             L587.2,2v83.4l5.8-5.6V7.8z M593.5,6.6l5.5-5.4h-10.9L593.5,6.6z M588.4,86.1l-0.2,0.1h0.4L588.4,86.1z M589.3,85.3l1,1h3.5
             l-2.8-2.8L589.3,85.3z M591.8,82.6l3.8,3.6h3.4l-5.4-5.4L591.8,82.6z M599.9,14.6L594.2,9v3.5l5.6,5.6L599.9,14.6z M594.3,17.6
             l5.6,5.8v-3.5l-5.6-5.8L594.3,17.6z M594.3,22.9l5.6,5.6V25l-5.6-5.6L594.3,22.9z M594.3,28l5.6,5.8v-3.5l-5.6-5.8L594.3,28z
@@ -260,61 +259,60 @@
              M617.4,14.9l4.2,4.3l0.9-2.6l-4.2-4.2L617.4,14.9z M619.7,79.6l7.5,5.8l-1-3l-8.4-8.4L619.7,79.6z M621.4,86.3h4.9l-7-5.4l-1.4,2
             L621.4,86.3z M618.7,10.9l4.2,4.2l0.9-2.6l-4.2-4.2L618.7,10.9z M620.3,7.4l3.9,3.9l0.8-2.7l-2.8-2.8L620.3,7.4z M623.2,5.2
             l2.2,2.2l0.9-2.8l-1.1-1L623.2,5.2z M626.2,2.9l0.5,0.5l0.5-1.2L626.2,2.9z"></path>
-                                </g>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div class="navbar-sponsors">
-                    <a href="http://spectrum-miami.com/" target="_blank"><img src="img/spectrum.png" alt="Spectrum Art Fair Miami Art Week"></a>
-                    <a href="http://reddotmiami.com/" target="_blank"> <img src="img/red-dot.png" alt="Red Dot Art Fair Miami Art Week"></a>
-                    <a href="http://www.miamiandbeaches.com/events/art-of-black" target="_blank"><img src="img/aobm.png" alt="Art of Black Art Fair Miami Art Week"> </a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="all">All</a></li>
-                        <li><a href="#" class="miamibeach">Miami Beach</a></li>
-                        <li><a href="#" class="wynwood">Wynwood</a></li>
-                        <li><a href="#" class="midtown">Midtown/Design District</a></li>
-                        <li><a href="#" class="downtown">Downtown</a></li>
-                        <li><a href="#" class="aobm">Art of Black</a></li>
-                        <li><a href="about" >About</a></li>
-                    </ul>
-                </div>
-
+          </g>
+        </g>
+      </svg>
+      </a> </div>
+    <div class="navbar-sponsors"> <a href="http://spectrum-miami.com/" target="_blank"><img src="img/spectrum.png" alt="Spectrum Art Fair Miami Art Week"></a> <a href="http://reddotmiami.com/" target="_blank"> <img src="img/red-dot.png" alt="Red Dot Art Fair Miami Art Week"></a> <a href="http://www.miamiandbeaches.com/events/art-of-black" target="_blank"><img src="img/aobm.png" alt="Art of Black Art Fair Miami Art Week"> </a> </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" class="all">All</a></li>
+        <li><a href="#" class="miamibeach">Miami Beach</a></li>
+        <li><a href="#" class="wynwood">Wynwood</a></li>
+        <li><a href="#" class="midtown">Midtown/Design District</a></li>
+        <li><a href="#" class="downtown">Downtown</a></li>
+        <li><a href="#" class="aobm">Art of Black</a></li>
+        <li><a href="#" class="about" >About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div id="map-container" class="col-sm-9 col-md-10 main">
+      <div id='map' class='map'></div>
+      <div class='pin-topleft pin-bottomleft z1 col3 listing-container'>
+        <div class='fill-white full-height-container'>
+          <div id='filter-categories' class='checkbox-pill col12 clearfix'>
+            <input type='checkbox' id='art' checked='checked'>
+            <label for='art' class='col6 truncate icon check unround button'>Art</label>
+            <input type='checkbox' id='theatre' checked='checked'>
+            <label for='theatre' class='col6 truncate icon check unround button'>Art of Black</label>
+            <input type='checkbox' id='music' checked='checked'>
+            <label for='music' class='col6 truncate icon check unround button'>Restaurants</label>
+            <input type='checkbox' id='museum' checked='checked'>
+            <label for='museum' class='col6 truncate icon check unround button'>Museums</label>
+          </div>
+          <div id='listing' class='scroll round-bottom fill-light round-bottom'> </div>
         </div>
-    </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div id="map-container" class="col-sm-9 col-md-10 main">
-                <div id='map' class='map'></div>
-                <div class='pin-topleft pin-bottomleft z1 col3 listing-container'>
-                    <div class='fill-white full-height-container'>
-                        <div id='filter-categories' class='checkbox-pill col12 clearfix'>
-                            <input type='checkbox' id='art' checked='checked'>
-                            <label for='art' class='col6 truncate icon check unround button'>Art</label>
-                            <input type='checkbox' id='theatre' checked='checked'>
-                            <label for='theatre' class='col6 truncate icon check unround button'>Art of Black</label>
-                            <input type='checkbox' id='music' checked='checked'>
-                            <label for='music' class='col6 truncate icon check unround button'>Restaurants</label>
-                            <input type='checkbox' id='museum' checked='checked'>
-                            <label for='museum' class='col6 truncate icon check unround button'>Museums</label>
-                        </div>
-                        <div id='listing' class='scroll round-bottom fill-light round-bottom'> </div>
-                    </div>
-                </div>
-                <div id='legend' class='pin-bottomright z1 pad2y legend'>
-                    <div class='pad1 fill-lighten3 radius small'> Drag the blue circle over points on the map to populate listings under it. Zooming on the circle increases or decreases its radius. </div>
-                </div>
-                <div class='pin-bottomleft z1 margin3 mb-watermark'>
-                    <div class='pad1y'> <img src='mb.svg' alt='Mapbox logo' /> </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-2 sidebar">
-                <ul class="nav nav-sidebar">
-                    <li class="active"><a href="#" class="all text-center">All <span class="sr-only">(current)</span></a></li>
-                    <li>
-                        <a href="#" class="text-center miamibeach"> <i id="beach" class="grow">
+      </div>
+      <div id='legend' class='pin-bottomright z1 pad2y legend'>
+        <div class='pad1 fill-lighten3 radius small'> Drag the blue circle over points on the map to populate listings under it. Zooming on the circle increases or decreases its radius. </div>
+      </div>
+      <div class='pin-bottomleft z1 margin3 mb-watermark'>
+        <div class='pad1y'> <img src='mb.svg' alt='Mapbox logo' /> </div>
+      </div>
+    </div>
+    <div id="about" class="col-sm-9 col-md-6 col-md-offset-2 main">
+      <div>
+        <h1>About</h1>
+      </div>
+      <p>This website was created by three BFA Graphic & Web Design program students and professor Rima Gerhard at Miami International University of Art & Design. The website is available on desktop and mobile, providing users with information regarding the fairs and galleries during Miami Art Week 2016. Other sections include additional information about restaurants and areas of interests, along with a link to the City of Miami Trolley information for these events. We hope you enjoy this website and find it useful!</p>
+    </div>
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active"><a href="#" class="all text-center">All <span class="sr-only">(current)</span></a></li>
+        <li> <a href="#" class="text-center miamibeach"> <i id="beach" class="grow">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 195.33 202.9">
             <defs>
               <style>
@@ -361,9 +359,8 @@
               </g>
             </g>
           </svg>
-          </i> Miami Beach</a>
-                    </li>
-                    <li> <a href="#" class="text-center wynwood"><i id="wood" class="shake">
+          </i> Miami Beach</a> </li>
+        <li> <a href="#" class="text-center wynwood"><i id="wood" class="shake">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 195.33 202.9">
             <defs>
               <style>
@@ -444,7 +441,7 @@
             </g>
           </svg>
           </i> Wynwood</a> </li>
-                    <li> <a href="#" class="text-center midtown"><i id="ball" class="rotate">
+        <li> <a href="#" class="text-center midtown"><i id="ball" class="rotate">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 195.33 202.9">
             <defs>
               <style>
@@ -532,7 +529,7 @@
             </g>
           </svg>
           </i> Midtown/Design District</a> </li>
-                    <li> <a href="#" class="text-center downtown"><i id="case">
+        <li> <a href="#" class="text-center downtown"><i id="case">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 195.33 202.9">
             <defs>
               <style>
@@ -553,43 +550,31 @@
             </g>
           </svg>
           </i> Downtown</a> </li>
-                    <li>
-                        <a href="#" class="text-center aobm">
-                            <img src="img/aobm-sidebar.png" alt="Art of Black Art Fairs Art Week Miami"> Art of Black</a>
-                    </li>
-                    <li>
-                    	<a href="about" class="text-center">About</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <li> <a href="#" class="text-center aobm"> <img src="img/aobm-sidebar.png" alt="Art of Black Art Fairs Art Week Miami"> Art of Black</a> </li>
+        <li> <a href="#" class="about text-center">About</a> </li>
+      </ul>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <!--<h4 class="text-center text-capitalize">Sponsored by</h4>-->
-                    <a href="http://www.miamigov.com/home/" target="_blank"><img src="img/miami-seal.png" alt="City of Miami Art Week Sponsor"></a>
-                    <a href="https://acegraphicsinc.net/" target="_blank"><img src="img/ace-graphics.png" alt="Ace Graphics Art Week Sponsor"></a>
-                    <a href="http://artcircuits.com/" target="_blank"><img src="img/art-circuits.png" alt="Art Circuits Art Week Sponsor"></a>
-                    <a href="http://www.miamidda.com/" target="_blank"><img src="img/dda.png" alt="Miami DDA Art Week Sponsor"></a>
-                    <a href="http://www.miamiandbeaches.com/" target="_blank"><img src="img/gmcvb.png" alt="GMCVB Art Week Sponsor"></a>
-                    <a href="https://www.artinstitutes.edu/miami" target="_blank"><img src="img/ai.png" alt="Miami International University of Art and Design Miami Art Week"></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12"> 
+        <!--<h4 class="text-center text-capitalize">Sponsored by</h4>--> 
+        <a href="http://www.miamigov.com/home/" target="_blank"><img src="img/miami-seal.png" alt="City of Miami Art Week Sponsor"></a> <a href="https://acegraphicsinc.net/" target="_blank"><img src="img/ace-graphics.png" alt="Ace Graphics Art Week Sponsor"></a> <a href="http://artcircuits.com/" target="_blank"><img src="img/art-circuits.png" alt="Art Circuits Art Week Sponsor"></a> <a href="http://www.miamidda.com/" target="_blank"><img src="img/dda.png" alt="Miami DDA Art Week Sponsor"></a> <a href="http://www.miamiandbeaches.com/" target="_blank"><img src="img/gmcvb.png" alt="GMCVB Art Week Sponsor"></a> <a href="https://www.artinstitutes.edu/miami" target="_blank"><img src="img/ai.png" alt="Miami International University of Art and Design Miami Art Week"></a> </div>
+    </div>
+  </div>
+</footer>
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script>
     window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src='bundle.js'></script>
+    </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
+<script src="https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script> 
+<script src='bundle.js'></script>
 </body>
-
 </html>

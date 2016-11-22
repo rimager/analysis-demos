@@ -222,6 +222,8 @@ function initialize() {
 
   $svg.addEventListener('wheel', zoomStart, false);
   $svg.addEventListener('mousewheel', zoomStart, false);
+  
+  
 }
 
 map.once('source.change', function(ev) {
@@ -277,7 +279,9 @@ map.on('mousemove', function(e) {
 });
 
 function aobm(){
-//map.setZoom(5);\\\
+
+$("#map-container").show();
+$("#about").hide();
 
 //hide other art fairs
 $('#art').attr('checked', false); // Unchecks it
@@ -299,6 +303,10 @@ map.flyTo({
 
 
 function miamibeach(){
+	
+$("#map-container").show();
+$("circle").show();
+$("#about").hide();	
 
 //make sure all art fairs show
 $("#art").prop("checked", true);
@@ -319,6 +327,10 @@ map.flyTo({
 }
 
 function wynwood(){
+	
+$("#map-container").show();
+$("circle").show();
+$("#about").hide();	
 
 //make sure all art fairs show
 $("#art").prop("checked", true);
@@ -339,6 +351,10 @@ map.flyTo({
 }
 
 function midtown(){
+	
+$("#map-container").show();
+$("circle").show();
+$("#about").hide();	
 
 //make sure all art fairs show
 $("#art").prop("checked", true);
@@ -360,6 +376,10 @@ map.flyTo({
 
 function downtown(){
 
+$("#map-container").show();
+$("circle").show();
+$("#about").hide();
+
 //make sure all art fairs show
 $("#art").prop("checked", true);
 var id = 'poi-art';
@@ -380,6 +400,10 @@ map.flyTo({
 
 function all(){
 
+$("#map-container").show();
+$("circle").show();
+$("#about").hide();
+	
 //make sure all art fairs show
 $("#art").prop("checked", true);
 var id = 'poi-art';
@@ -398,7 +422,15 @@ map.flyTo({
 });
 }
 
+function about(){
+	$("circle").hide()
+	$("#map-container").toggle(1500, function(){
+	$("#about").toggle(1500);
+	});
 
+}
+
+$(".about").click(about);
 $('.all').click(all);
 $('.miamibeach').click(miamibeach);
 $('.wynwood').click(wynwood);
